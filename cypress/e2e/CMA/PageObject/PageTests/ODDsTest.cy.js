@@ -24,4 +24,13 @@ describe('CMA ODDsPage Implementation', () =>{
         ODDsPage.pressCampaniaDropDownMenuButton()
         ODDsPage.pressCampania202501FromDropDownMenuButton()
     })
+
+    it('Validate I can go from dropDown menu to ODDPage and if Iam in ODDPage then I sohuld be able to select Peru and 202501 from dropdown menu', () => {
+        HomePage.pressHomeOption()
+        HomePage.pressODDsOption()
+        ODDsPage.pressPaisDropDownMenuButton()
+        ODDsPage.pressPaisPeruFromDropDownMenuButton()
+        ODDsPage.pressCampaniaDropDownMenuButton()
+        ODDsPage.pressCampania202501FromDropDownMenuButton()
+    })
 }) 

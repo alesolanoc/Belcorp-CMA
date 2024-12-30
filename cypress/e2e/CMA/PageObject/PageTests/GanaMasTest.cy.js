@@ -24,4 +24,13 @@ describe('CMA Gana+Page Implementation', () =>{
         GanaMasPage.pressCampaniaDropDownMenuButton()
         GanaMasPage.pressCampania202501FromDropDownMenuButton()
     })
+
+    it('Validate I can go from dropDown menu to GanaMasPage and if Iam in GanaMasPage then I sohuld be able to select Peru and 202501 from dropdown menu', () => {
+        HomePage.pressHomeOption()
+        HomePage.pressGanaMasOption()
+        GanaMasPage.pressPaisDropDownMenuButton()
+        GanaMasPage.pressPaisPeruFromDropDownMenuButton()
+        GanaMasPage.pressCampaniaDropDownMenuButton()
+        GanaMasPage.pressCampania202501FromDropDownMenuButton()
+    })
 }) 
