@@ -23,7 +23,7 @@ describe('CMA HomePage Implementation', () =>{
         HomePage.elements.eventosLabel().contains('Evento')
     })
 
-    it('Validate if Iam in HomePage then I sohuld be able to get into Gana+ page after click Gana+ card', () => {
+    it('Validate if Iam in HomePage then I should be able to get into Gana+ page after click Gana+ card', () => {
         HomePage.pressGanaMasButton()
     })
 }) 
