@@ -1,28 +1,24 @@
 class ganaMasPage {
     elements = {
         ganaMasLabel : () => cy.get('.text-xl.font-bold'),
-        paisDropDownMenu : () => cy.xpath("//div[contains(text(),'Pais ...')]"),
-        paisPeruFromDropDownMenu : () => cy.xpath("//div[normalize-space()='Perú']"),
-        campaniaDropDownMenu : () => cy.xpath("//div[contains(text(),'Campaña ...')]"),
-        campania202501FromDropDownMenu : () => cy.xpath("//div[normalize-space()='202501']")
+        eventoOption : () => cy.xpath("//span[normalize-space()='Envio #1']"),
+        labelScenarioCard : () => cy.xpath("//span[normalize-space()='#0 Scenario_2_3']"),
+        abrirButtonScenario : () => cy.get('body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)'),
+        resultadosLabel : () => cy.get('body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)'),
+        salirEventosOption : () => cy.xpath("//button[normalize-space()='Salir de Escenario']")       
     }
 
-    pressPaisDropDownMenuButton() {
-        this.elements.paisDropDownMenu().click()
+    pressEventoOption() {
+        this.elements.eventoOption().click()
     }
 
-    pressPaisPeruFromDropDownMenuButton() {
-        this.elements.paisPeruFromDropDownMenu().click()
+    pressAbrirButtonFromScenarioCard() {
+        this.elements.abrirButtonScenario().click()
     }
 
-    pressCampaniaDropDownMenuButton() {
-        this.elements.campaniaDropDownMenu().click()
+    pressSalirEventosOption() {
+        this.elements.salirEventosOption().click()
     }
-
-    pressCampania202501FromDropDownMenuButton() {
-        this.elements.campania202501FromDropDownMenu().click()
-    }   
 }
 
 module.exports = new ganaMasPage()
- 
