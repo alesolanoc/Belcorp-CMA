@@ -1,6 +1,7 @@
 import ODDsPage from "../PageElements/ODDsPage.cy"
 import HomePage from "../PageElements/HomePage.cy"
 import BasePage from "../PageElements/BasePage.cy"
+import { testCasesODDsHighLevelDefinition } from "../Features/oDDsTCsHighLevel"
 
 describe('CMA ODDsPage Implementation', () =>{
 
@@ -12,12 +13,12 @@ describe('CMA ODDsPage Implementation', () =>{
         BasePage.goToURL()
     })
 
-    it('Validate if Iam in ODDPage then ODD label should be displayed', () => {
+    it(testCasesODDsHighLevelDefinition.TC1.NAME, () => {
         HomePage.pressODDsButton()
-        ODDsPage.elements.ODDsLabel().should('have.text','ODD')
+        ODDsPage.elements.ODDsLabel().should('have.text',testCasesODDsHighLevelDefinition.TC1.EXPECTED1)
     })
 
-    it('Validate if Iam in ODDPage then I should be able to select Peru and 202501 from dropdown menu', () => {
+    it(testCasesODDsHighLevelDefinition.TC2.NAME, () => {
         HomePage.pressODDsButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
@@ -25,7 +26,7 @@ describe('CMA ODDsPage Implementation', () =>{
         HomePage.pressCampania202501FromDropDownMenuButton()
     })
 
-    it('Validate I can go from dropDown menu to ODDPage and if Iam in ODDPage then I should be able to select Peru and 202501 from dropdown menu', () => {
+    it(testCasesODDsHighLevelDefinition.TC3.NAME, () => {
         HomePage.pressHomeOption()
         HomePage.pressODDsOption()
         HomePage.pressPaisDropDownMenuButton()
@@ -34,7 +35,7 @@ describe('CMA ODDsPage Implementation', () =>{
         HomePage.pressCampania202501FromDropDownMenuButton()
     })
 
-    it('Validate if Iam in ODDPage then I should be able to select Peru and 202501 from dropdown menu and select evento1', () => {
+    it(testCasesODDsHighLevelDefinition.TC4.NAME, () => {
         HomePage.pressGanaMasButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
@@ -43,17 +44,17 @@ describe('CMA ODDsPage Implementation', () =>{
         ODDsPage.pressEventoOption()
     })
     
-    it('Validate if Iam in ODDPage then I should be able to select Peru and 202501 from dropdown menu and select evento1 and abrir any scenario and validate resultado Label and salir de escenario', () => {
+    it(testCasesODDsHighLevelDefinition.TC5.NAME, () => {
         HomePage.pressGanaMasButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
         HomePage.pressCampaniaDropDownMenuButton()
         HomePage.pressCampania202501FromDropDownMenuButton()
         ODDsPage.pressEventoOption()
-        ODDsPage.elements.labelScenarioCard().should('have.text','#0 Scenario_2_3')
+        ODDsPage.elements.labelScenarioCard().should('have.text',testCasesODDsHighLevelDefinition.TC5.EXPECTED1)
         ODDsPage.pressAbrirButtonFromScenarioCard()
-        ODDsPage.elements.resultadosLabel().contains('RESULTADOS KPI')
+        ODDsPage.elements.resultadosLabel().contains(testCasesODDsHighLevelDefinition.TC5.EXPECTED2)
         ODDsPage.pressSalirEventosOption()
-        ODDsPage.elements.labelScenarioCard().should('have.text','#0 Scenario_2_3')
+        ODDsPage.elements.labelScenarioCard().should('have.text',testCasesODDsHighLevelDefinition.TC5.EXPECTED1)
     })
 }) 

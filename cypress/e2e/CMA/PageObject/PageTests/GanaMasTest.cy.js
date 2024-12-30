@@ -1,6 +1,8 @@
 import GanaMasPage from "../PageElements/GanaMasPage.cy"
 import HomePage from "../PageElements/HomePage.cy"
 import BasePage from "../PageElements/BasePage.cy"
+import { testCasesGanaMasHighLevelDefinition } from "../Features/ganaMasTCsHighLevel"
+
 
 describe('CMA Gana+Page Implementation', () =>{
 
@@ -12,12 +14,12 @@ describe('CMA Gana+Page Implementation', () =>{
         BasePage.goToURL()
     })
 
-    it('Validate if Iam in GanaMasPage then Gana+ label should be displayed', () => {
+    it(testCasesGanaMasHighLevelDefinition.TC1.NAME, () => {
         HomePage.pressGanaMasButton()
-        GanaMasPage.elements.ganaMasLabel().should('have.text','Gana +')
+        GanaMasPage.elements.ganaMasLabel().should('have.text',testCasesGanaMasHighLevelDefinition.TC1.EXPECTED1)
     })
 
-    it('Validate if Iam in GanaMasPage then I should be able to select Peru and 202501 from dropdown menu', () => {
+    it(testCasesGanaMasHighLevelDefinition.TC2.NAME, () => {
         HomePage.pressGanaMasButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
@@ -25,7 +27,7 @@ describe('CMA Gana+Page Implementation', () =>{
         HomePage.pressCampania202501FromDropDownMenuButton()
     })
 
-    it('Validate I can go from dropDown menu to GanaMasPage and if Iam in GanaMasPage then I should be able to select Peru and 202501 from dropdown menu', () => {
+    it(testCasesGanaMasHighLevelDefinition.TC3.NAME, () => {
         HomePage.pressHomeOption()
         HomePage.pressGanaMasOption()
         HomePage.pressPaisDropDownMenuButton()
@@ -34,7 +36,7 @@ describe('CMA Gana+Page Implementation', () =>{
         HomePage.pressCampania202501FromDropDownMenuButton()
     })
 
-    it('Validate if Iam in GanaMasPage then I should be able to select Peru and 202501 from dropdown menu and select evento1', () => {
+    it(testCasesGanaMasHighLevelDefinition.TC4.NAME, () => {
         HomePage.pressGanaMasButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
@@ -43,17 +45,17 @@ describe('CMA Gana+Page Implementation', () =>{
         GanaMasPage.pressEventoOption()
     })
 
-    it('Validate if Iam in GanaMasPage then I should be able to select Peru and 202501 from dropdown menu and select evento1 and abrir any scenario and validate resultado Label and salir de escenario', () => {
+    it(testCasesGanaMasHighLevelDefinition.TC5.NAME, () => {
         HomePage.pressGanaMasButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
         HomePage.pressCampaniaDropDownMenuButton()
         HomePage.pressCampania202501FromDropDownMenuButton()
         GanaMasPage.pressEventoOption()
-        GanaMasPage.elements.labelScenarioCard().should('have.text','#0 Scenario_2_3')
+        GanaMasPage.elements.labelScenarioCard().should('have.text',testCasesGanaMasHighLevelDefinition.TC5.EXPECTED1)
         GanaMasPage.pressAbrirButtonFromScenarioCard()
-        GanaMasPage.elements.resultadosLabel().contains('RESULTADOS KPI')
+        GanaMasPage.elements.resultadosLabel().contains(testCasesGanaMasHighLevelDefinition.TC5.EXPECTED2)
         GanaMasPage.pressSalirEventosOption()
-        GanaMasPage.elements.labelScenarioCard().should('have.text','#0 Scenario_2_3')
+        GanaMasPage.elements.labelScenarioCard().should('have.text',testCasesGanaMasHighLevelDefinition.TC5.EXPECTED1)
     })
 }) 

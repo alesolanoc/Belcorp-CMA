@@ -1,6 +1,8 @@
 import FestivalesPage from "../PageElements/FestivalesPage.cy"
 import HomePage from "../PageElements/HomePage.cy"
 import BasePage from "../PageElements/BasePage.cy"
+import { testCasesFestivalesHighLevelDefinition } from "../Features/festivalesTCsHighLevel"
+
 
 describe('CMA FestivalesPage Implementation', () =>{
 
@@ -12,12 +14,12 @@ describe('CMA FestivalesPage Implementation', () =>{
         BasePage.goToURL()
     })
 
-    it('Validate if Iam in FestivalesPage then Gana+ label should be displayed', () => {
+    it(testCasesFestivalesHighLevelDefinition.TC1.NAME, () => {
         HomePage.pressFestivalessButton()
-        FestivalesPage.elements.FestivalesLabel().should('have.text','Festivales')
+        FestivalesPage.elements.FestivalesLabel().should('have.text',testCasesFestivalesHighLevelDefinition.TC1.EXPECTED1)
     })
 
-    it('Validate if Iam in FestivalesPage then I should be able to select Peru and 202501 from dropdown menu', () => {
+    it(testCasesFestivalesHighLevelDefinition.TC2.NAME, () => {
         HomePage.pressFestivalessButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
@@ -25,7 +27,7 @@ describe('CMA FestivalesPage Implementation', () =>{
         HomePage.pressCampania202501FromDropDownMenuButton()
     })
 
-    it('Validate I can go from dropDown menu to FestivalesPage and if Iam in FestivalesPage then I should be able to select Peru and 202501 from dropdown menu', () => {
+    it(testCasesFestivalesHighLevelDefinition.TC3.NAME, () => {
         HomePage.pressHomeOption()
         HomePage.pressFestivalesOption()
         HomePage.pressPaisDropDownMenuButton()
@@ -34,7 +36,7 @@ describe('CMA FestivalesPage Implementation', () =>{
         HomePage.pressCampania202501FromDropDownMenuButton()
     })
 
-    it('Validate if Iam in FestivalesPage then I should be able to select Peru and 202501 from dropdown menu and select evento1', () => {
+    it(testCasesFestivalesHighLevelDefinition.TC4.NAME, () => {
         HomePage.pressFestivalessButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
@@ -43,21 +45,21 @@ describe('CMA FestivalesPage Implementation', () =>{
         FestivalesPage.pressEventoOption()
     })
     
-    it('Validate if Iam in FestivalesPage then I should be able to visit tabs', () => {
+    it(testCasesFestivalesHighLevelDefinition.TC5.NAME, () => {
         HomePage.pressFestivalessButton()
         HomePage.pressPaisDropDownMenuButton()
         HomePage.pressPaisPeruFromDropDownMenuButton()
         HomePage.pressCampaniaDropDownMenuButton()
         HomePage.pressCampania202501FromDropDownMenuButton()
         FestivalesPage.pressEventoOption()
-        FestivalesPage.elements.labelScenarioCard().should('have.text','#0 Scenario_23_1')
+        FestivalesPage.elements.labelScenarioCard().should('have.text',testCasesFestivalesHighLevelDefinition.TC5.EXPECTED1)
         FestivalesPage.pressAbrirButtonFromScenarioCard()
         FestivalesPage.pressCargarPremiosTab()
-        FestivalesPage.elements.headerLabelCargarPremiosTab().should('have.text','Ingresar Id de ofertas creadas en Planit Evo:')
+        FestivalesPage.elements.headerLabelCargarPremiosTab().should('have.text',testCasesFestivalesHighLevelDefinition.TC5.EXPECTED2)
         FestivalesPage.pressConsultorasTab()
-        FestivalesPage.elements.headerLabelConsultorasTab().should('have.text','Carga Manual')
+        FestivalesPage.elements.headerLabelConsultorasTab().should('have.text',testCasesFestivalesHighLevelDefinition.TC5.EXPECTED3)
         FestivalesPage.pressNivelesTab()
-        FestivalesPage.elements.headerLabelNivelesTab().should('have.text','Niveles por grupo')
+        FestivalesPage.elements.headerLabelNivelesTab().should('have.text',testCasesFestivalesHighLevelDefinition.TC5.EXPECTED4)
         FestivalesPage.pressAsignarPremiosTab()
     })
 }) 

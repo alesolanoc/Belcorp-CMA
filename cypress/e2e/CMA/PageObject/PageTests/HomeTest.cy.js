@@ -1,5 +1,7 @@
 import BasePage from "../PageElements/BasePage.cy"
 import HomePage from "../PageElements/HomePage.cy"
+import { testCasesHomeHighLevelDefinition } from "../Features/homeTCsHighLevel"
+
 
 describe('CMA HomePage Implementation', () =>{
 
@@ -11,19 +13,19 @@ describe('CMA HomePage Implementation', () =>{
         BasePage.goToURL()
     })
 
-    it('Validate if Iam in HomePage then Inicio label should be displayed', () => {
-        HomePage.elements.inicioLabel().should('have.text','Inicio')
+    it(testCasesHomeHighLevelDefinition.TC1.NAME, () => {
+        HomePage.elements.inicioLabel().should('have.text',testCasesHomeHighLevelDefinition.TC1.EXPECTED1)
     })
 
-    it('Validate if Iam in HomePage then Hola label should be displayed', () => {
-        HomePage.elements.holaLabel().contains('Hola')
+    it(testCasesHomeHighLevelDefinition.TC2.NAME, () => {
+        HomePage.elements.holaLabel().contains(testCasesHomeHighLevelDefinition.TC2.EXPECTED1)
     })
 
-    it('Validate if Iam in HomePage then Eventos label should be displayed', () => {
-        HomePage.elements.eventosLabel().contains('Evento')
+    it(testCasesHomeHighLevelDefinition.TC3.NAME, () => {
+        HomePage.elements.eventosLabel().contains(testCasesHomeHighLevelDefinition.TC3.EXPECTED1)
     })
 
-    it('Validate if Iam in HomePage then I should be able to get into Gana+ page after click Gana+ card', () => {
+    it(testCasesHomeHighLevelDefinition.TC4.NAME, () => {
         HomePage.pressGanaMasButton()
     })
 }) 
