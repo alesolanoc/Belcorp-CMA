@@ -39,5 +39,23 @@ export const testCasesGanaMasHighLevelDefinition = {
         EXPECTED1 : '#1 Scenario_2_1',
         EXPECTED2 : 'Ingresar Id de ofertas creadas en Planit Evo:',
         EXPECTED3 : 'Eventos'
+    },
+    TC7 : {
+        NAME : 'Validate if Iam in FestivalesPage then I should be able to visit some events',
+        INPUT1 : 'Perú',
+        INPUT2 : '202501',
+        INPUT3 : 'Envio #1',
+        INPUT4 : '#1 Scenario_2_1',
+        INPUT5 : '2',
+        INPUT6 : 'EVENTO E05',
+        EXPECTED1 : '#1 Scenario_2_1',
+        EXPECTED2 : 'Ingresar Id de ofertas creadas en Planit Evo:',
+        EXPECTED3 : 'Eventos',
+        EXPECTED4 : 'Detalles del Evento',
+        EXPECTED5 : 'E01_S3',
+        EXPECTED6 : '17',
+        EXPECTED7 : 'Total Parametros de Oferta',
+        EXPECTED8 : 'Total de Segmentos',
+        EXPECTED9 : '98'
     }
 }

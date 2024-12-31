@@ -4,7 +4,8 @@ export const constants = {
     GANAMAS : {
         EVENTO: '',
         SCENARIO: '',
-        ABRIR: ''
+        ABRIR: '',
+        NOMBREEVENTO: ''
     },
     ODDs : {
         EVENTO: '',
