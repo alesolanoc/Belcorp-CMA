@@ -3,9 +3,13 @@ import { constants } from "../Utils/constants"
 class FestivalesPage {
     elements = {
         FestivalesLabel : () => cy.get('.text-xl.font-bold'),
+        paisDropDownMenu : () => cy.xpath("//div[contains(text(),'Pais ...')]"),
+        paisFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.PAIS + "']"),
+        campaniaDropDownMenu : () => cy.xpath("//div[contains(text(),'Campaña ...')]"),
+        campaniaFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.CAMPANIA + "']"),
         eventoOption : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.EVENTO + "']"),
         labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.SCENARIO + "']"),
-        abrirButtonScenario : () => cy.get('body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)'),
+        abrirButtonScenario : () => cy.xpath("(//button[normalize-space()='Abrir'])[" + constants.FESTIVALES.ABRIR + "]"),
         cargarPremiosTab : () => cy.xpath("(//button[normalize-space()='Carga Premios'])[1]"),
         headerLabelCargarPremiosTab : () => cy.xpath("//label[normalize-space()='Ingresar Id de ofertas creadas en Planit Evo:']"),
         consultorasTab : () => cy.xpath("(//button[normalize-space()='Consultoras'])[1]"),
@@ -18,6 +22,22 @@ class FestivalesPage {
     pressEventoOption() {
         this.elements.eventoOption().click()
     }
+    
+    pressPaisDropDownMenuButton() {
+        this.elements.paisDropDownMenu().click()
+    }
+
+    pressPaisFromDropDownMenuButton() {
+        this.elements.paisFromDropDownMenu().click()
+    }
+
+    pressCampaniaDropDownMenuButton() {
+        this.elements.campaniaDropDownMenu().click()
+    }
+
+    pressCampaniaFromDropDownMenuButton() {
+        this.elements.campaniaFromDropDownMenu().click()
+    }   
     
     pressAbrirButtonFromScenarioCard() {
         this.elements.abrirButtonScenario().click()

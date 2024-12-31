@@ -1,16 +1,19 @@
 export const constants = {
-    PAIS: 'Perú',
-    CAMPANIA: '202501',
+    PAIS: '',
+    CAMPANIA: '',
     GANAMAS : {
-        EVENTO: 'Envio #1',
-        SCENARIO: '#0 Scenario_2_3'
+        EVENTO: '',
+        SCENARIO: '',
+        ABRIR: ''
     },
     ODDs : {
-        EVENTO: 'Envio #1',
-        SCENARIO: '#0 Scenario_2_3'
+        EVENTO: '',
+        SCENARIO: '',
+        ABRIR: ''
     },
     FESTIVALES : {
-        EVENTO: 'Envio #1',
-        SCENARIO: '#0 Scenario_23_1'
+        EVENTO: '',
+        SCENARIO: '',
+        ABRIR: ''
     }
 }
