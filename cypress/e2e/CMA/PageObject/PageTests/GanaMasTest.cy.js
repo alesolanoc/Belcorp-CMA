@@ -91,7 +91,7 @@ describe('CMA Gana+Page Implementation', () =>{
         GanaMasPage.elements.headerLabelEventosTab().should('have.text',testCasesGanaMasHighLevelDefinition.TC6.EXPECTED3)
     })
 
-    it.only(testCasesGanaMasHighLevelDefinition.TC7.NAME, () => {
+    it(testCasesGanaMasHighLevelDefinition.TC7.NAME, () => {
         constants.PAIS = testCasesGanaMasHighLevelDefinition.TC7.INPUT1
         constants.CAMPANIA = testCasesGanaMasHighLevelDefinition.TC7.INPUT2
         constants.GANAMAS.EVENTO = testCasesGanaMasHighLevelDefinition.TC7.INPUT3
