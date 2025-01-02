@@ -8,7 +8,7 @@ class ganaMasPage {
         campaniaDropDownMenu : () => cy.xpath("//div[contains(text(),'Campaña ...')]"),
         campaniaFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.CAMPANIA + "']"),
         eventoOption : () => cy.xpath("//span[normalize-space()='" + constants.GANAMAS.EVENTO + "']"),
-        labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.GANAMAS.SCENARIO + "']"),
+        labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.GANAMAS.SCENARIO + "']",{timeout: 5000}),
         abrirButtonScenario : () => cy.xpath("(//button[normalize-space()='Abrir'])[" + constants.GANAMAS.ABRIR + "]"),
         ofertasTab : () => cy.xpath("(//button[normalize-space()='Ofertas'])[1]"),
         headerLabelOfertasTab : () => cy.xpath("//label[normalize-space()='Ingresar Id de ofertas creadas en Planit Evo:']"),

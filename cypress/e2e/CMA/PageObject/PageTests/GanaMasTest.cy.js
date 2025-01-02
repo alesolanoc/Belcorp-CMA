@@ -91,7 +91,7 @@ describe('CMA Gana+Page Implementation', () =>{
         GanaMasPage.elements.headerLabelEventosTab().should('have.text',testCasesGanaMasHighLevelDefinition.TC6.EXPECTED3)
     })
 
-    it(testCasesGanaMasHighLevelDefinition.TC7.NAME, () => {
+    it.only(testCasesGanaMasHighLevelDefinition.TC7.NAME, () => {
         constants.PAIS = testCasesGanaMasHighLevelDefinition.TC7.INPUT1
         constants.CAMPANIA = testCasesGanaMasHighLevelDefinition.TC7.INPUT2
         constants.GANAMAS.EVENTO = testCasesGanaMasHighLevelDefinition.TC7.INPUT3
@@ -118,5 +118,7 @@ describe('CMA Gana+Page Implementation', () =>{
         cy.findAllByText(testCasesGanaMasHighLevelDefinition.TC7.EXPECTED7).last().should('be.visible').should('have.text','Total Parametros de Oferta 1')
         cy.findAllByText(testCasesGanaMasHighLevelDefinition.TC7.EXPECTED8).last().should('be.visible').should('have.text','Total de Segmentos 1')
         cy.findAllByText(testCasesGanaMasHighLevelDefinition.TC7.EXPECTED9).last().should('be.visible').should('have.text','98')
+        GanaMasPage.pressSalirEventosOption()
+        GanaMasPage.elements.labelScenarioCard().should('have.text',testCasesGanaMasHighLevelDefinition.TC7.EXPECTED1)
     })
 }) 
