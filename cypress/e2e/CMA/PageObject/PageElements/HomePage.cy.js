@@ -8,6 +8,7 @@ class homePage {
         ganaMasCard : () => cy.get("body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > p:nth-child(2)"),
         oDDsCard : () => cy.get("body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > p:nth-child(2)"),     
         festivalesCard : () => cy.get("body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(4) > div:nth-child(1) > p:nth-child(2)"),
+        carritoSugeridoCard :() => cy.get("body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(9) > div:nth-child(1) > p:nth-child(2)"),
         leftDropDownMenu : () => cy.get("button[id='radix-:r2:']"),
         leftDropDownMenuInicioOption : () => cy.xpath("//div[contains(text(),'Inicio')]"),
         leftDropDownMenuGanaMasOption : () => cy.xpath("//div[@role='menuitem'][normalize-space()='Gana +']"),
@@ -25,6 +26,10 @@ class homePage {
 
     pressFestivalessButton() {
         this.elements.festivalesCard().click()
+    }
+
+    pressCarritoSugeridoButton() {
+        this.elements.carritoSugeridoCard().click()
     }
 
     pressHomeOption() {

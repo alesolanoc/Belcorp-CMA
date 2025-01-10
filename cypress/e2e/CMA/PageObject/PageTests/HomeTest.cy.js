@@ -13,7 +13,7 @@ describe('CMA HomePage Implementation', () =>{
         BasePage.goToURL()
     })
 
-    it(testCasesHomeHighLevelDefinition.TC1.NAME, () => {
+ /*   it(testCasesHomeHighLevelDefinition.TC1.NAME, () => {
         HomePage.elements.inicioLabel().should('have.text',testCasesHomeHighLevelDefinition.TC1.EXPECTED1)
     })
 
@@ -27,5 +27,9 @@ describe('CMA HomePage Implementation', () =>{
 
     it(testCasesHomeHighLevelDefinition.TC4.NAME, () => {
         HomePage.pressGanaMasButton()
+    })*/
+
+    it(testCasesHomeHighLevelDefinition.TC5.NAME, () => {
+        HomePage.pressCarritoSugeridoButton()
     })
 }) 

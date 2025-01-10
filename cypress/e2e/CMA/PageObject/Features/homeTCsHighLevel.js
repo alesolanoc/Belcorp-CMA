@@ -13,5 +13,8 @@ export const testCasesHomeHighLevelDefinition = {
     },
     TC4 : {
         NAME : 'Validate if Iam in HomePage then I should be able to get into Gana+ page after click Gana+ card'
+    },
+    TC5 : {
+        NAME : 'Validate if Iam in HomePage then I should be able to get into CS after click CS card'
     }
 }
