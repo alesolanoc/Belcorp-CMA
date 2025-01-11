@@ -16,17 +16,17 @@ export const testCasesFestivalesHighLevelDefinition = {
     TC4 : {
         NAME : 'Validate if Iam in FestivalesPage then I should be able to select Peru and 202501 from dropdown menu and select evento1',
         INPUT1 : 'Perú',
-        INPUT2 : '202501',
+        INPUT2 : '202503',
         INPUT3 : 'Envio #1'
     },
     TC5 : {
         NAME : 'Validate if Iam in FestivalesPage then I should be able to visit tabs',
         INPUT1 : 'Perú',
-        INPUT2 : '202501',
+        INPUT2 : '202503',
         INPUT3 : 'Envio #1',
-        INPUT4 : '#0 Scenario_23_1',
+        INPUT4 : '#0 Scenario_26_3',
         INPUT5 : '1',
-        EXPECTED1 : '#0 Scenario_23_1',
+        EXPECTED1 : '#0 Scenario_26_3',
         EXPECTED2 : 'Ingresar Id de ofertas creadas en Planit Evo:',
         EXPECTED3 : 'Carga Manual',
         EXPECTED4 : 'Niveles por grupo'

@@ -8,7 +8,7 @@ class FestivalesPage {
         campaniaDropDownMenu : () => cy.xpath("//div[contains(text(),'Campaña ...')]"),
         campaniaFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.CAMPANIA + "']"),
         eventoOption : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.EVENTO + "']",{timeout: 15000}),
-        labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.SCENARIO + "']"),
+        labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.SCENARIO + "']",{timeout: 15000}),
         abrirButtonScenario : () => cy.xpath("(//button[normalize-space()='Abrir'])[" + constants.FESTIVALES.ABRIR + "]"),
         cargarPremiosTab : () => cy.xpath("(//button[normalize-space()='Carga Premios'])[1]"),
         headerLabelCargarPremiosTab : () => cy.xpath("//label[normalize-space()='Ingresar Id de ofertas creadas en Planit Evo:']"),
