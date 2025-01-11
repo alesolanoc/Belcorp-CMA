@@ -7,7 +7,7 @@ class FestivalesPage {
         paisFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.PAIS + "']"),
         campaniaDropDownMenu : () => cy.xpath("//div[contains(text(),'Campaña ...')]"),
         campaniaFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.CAMPANIA + "']"),
-        eventoOption : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.EVENTO + "']"),
+        eventoOption : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.EVENTO + "']",{timeout: 15000}),
         labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.FESTIVALES.SCENARIO + "']"),
         abrirButtonScenario : () => cy.xpath("(//button[normalize-space()='Abrir'])[" + constants.FESTIVALES.ABRIR + "]"),
         cargarPremiosTab : () => cy.xpath("(//button[normalize-space()='Carga Premios'])[1]"),

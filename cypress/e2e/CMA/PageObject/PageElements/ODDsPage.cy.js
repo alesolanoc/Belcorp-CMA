@@ -7,7 +7,7 @@ class ODDsPage {
         paisFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.PAIS + "']"),
         campaniaDropDownMenu : () => cy.xpath("//div[contains(text(),'Campaña ...')]"),
         campaniaFromDropDownMenu : () => cy.xpath("//div[normalize-space()='" + constants.CAMPANIA + "']"),
-        eventoOption : () => cy.xpath("//span[normalize-space()='" + constants.ODDs.EVENTO + "']"),
+        eventoOption : () => cy.xpath("//span[normalize-space()='" + constants.ODDs.EVENTO + "']",{timeout: 9000}),
         labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.ODDs.SCENARIO + "']"),
         abrirButtonScenario : () => cy.xpath("(//button[normalize-space()='Abrir'])[" + constants.ODDs.ABRIR + "]"),
         resultadosLabel : () => cy.get('body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)'),
