@@ -74,4 +74,52 @@ describe('CMA FestivalesPage Implementation', () =>{
         FestivalesPage.elements.headerLabelNivelesTab().should('have.text',testCasesFestivalesHighLevelDefinition.TC5.EXPECTED4)
         FestivalesPage.pressAsignarPremiosTab()
     })
+
+    it.only(testCasesFestivalesHighLevelDefinition.TC6.NAME, () => {
+        constants.PAIS = testCasesFestivalesHighLevelDefinition.TC6.INPUT1
+        constants.CAMPANIA = testCasesFestivalesHighLevelDefinition.TC6.INPUT2
+        constants.FESTIVALES.EVENTO = testCasesFestivalesHighLevelDefinition.TC6.INPUT3
+        constants.FESTIVALES.SCENARIO = testCasesFestivalesHighLevelDefinition.TC6.INPUT4
+        constants.FESTIVALES.ABRIR = testCasesFestivalesHighLevelDefinition.TC6.INPUT5
+        HomePage.pressFestivalessButton()
+        FestivalesPage.pressPaisDropDownMenuButton()
+        FestivalesPage.pressPaisFromDropDownMenuButton()
+        FestivalesPage.pressCampaniaDropDownMenuButton()
+        FestivalesPage.pressCampaniaFromDropDownMenuButton()
+        FestivalesPage.pressEventoOption()
+        FestivalesPage.elements.labelScenarioCard().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED1)
+        FestivalesPage.pressAbrirButtonFromScenarioCard()
+        FestivalesPage.pressCargarPremiosTab()
+        FestivalesPage.elements.headerLabelCargarPremiosTab().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED2)
+        FestivalesPage.elements.IDOfertasHeader().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED3)
+     /*   FestivalesPage.pressSortIconIDOfertaHeader()
+        FestivalesPage.pressFindIconIDOfertaHeader()
+        FestivalesPage.selectALLCheckBoxIDOfertas()
+        cy.window().then( function(p){
+            FestivalesPage.typeIDOfertaInputField()
+        })
+        FestivalesPage.pressSortIconIDOfertaHeader()
+        FestivalesPage.press3DotsIDOferta()
+        FestivalesPage.selectGroupByIDOferta()
+        FestivalesPage.press3DotsIDOferta()
+        FestivalesPage.pressUnSelectGroupByIDOferta()*/
+
+        FestivalesPage.elements.DescripcionHeader().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED4)
+     /*   FestivalesPage.pressSortIconDescripcionHeader()
+        FestivalesPage.pressFindIconDescripcionHeader()
+        FestivalesPage.selectALLCheckBoxDescripcion()
+        cy.window().then( function(p){
+            FestivalesPage.typeDescripcionInputField()
+        })
+        FestivalesPage.pressSortIconDescripcionHeader()
+        FestivalesPage.press3DotsDescripcion()
+        FestivalesPage.selectGroupByDescripcion()
+        FestivalesPage.press3DotsDescripcion()*/
+        FestivalesPage.elements.PrecioHeader().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED5)
+        FestivalesPage.elements.CommentsHeader().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED6)
+        FestivalesPage.elements.MedioHeader().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED7)
+        FestivalesPage.elements.AlcanceHeader().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED8)
+        FestivalesPage.elements.FlagActivoeader().should('have.text',testCasesFestivalesHighLevelDefinition.TC6.EXPECTED9)
+
+    })
 }) 

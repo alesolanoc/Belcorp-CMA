@@ -11,7 +11,7 @@ class ganaMasPage {
         labelScenarioCard : () => cy.xpath("//span[normalize-space()='" + constants.GANAMAS.SCENARIO + "']",{timeout: 5000}),
         abrirButtonScenario : () => cy.xpath("(//button[normalize-space()='Abrir'])[" + constants.GANAMAS.ABRIR + "]"),
         ofertasTab : () => cy.xpath("(//button[normalize-space()='Ofertas'])[1]"),
-        headerLabelOfertasTab : () => cy.xpath("//label[normalize-space()='Ingresar Id de ofertas creadas en Planit Evo:']"),
+        headerLabelOfertasTab : () => cy.xpath("//label[normalize-space()='Última actualización del maestro de ofertas:']"),
         eventosTab : () => cy.xpath("(//button[normalize-space()='Eventos'])[1]"),
         headerLabelEventosTab : () => cy.xpath("(//div[normalize-space()='Eventos'])[1]"),
         eventoIconSection : () => cy.get("body > div:nth-child(1) > main:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(" + constants.GANAMAS.NroEVENTO + ") > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1) > button:nth-child(1) > div:nth-child(2)"),

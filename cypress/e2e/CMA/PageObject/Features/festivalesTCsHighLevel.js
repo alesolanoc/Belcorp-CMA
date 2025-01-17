@@ -30,5 +30,23 @@ export const testCasesFestivalesHighLevelDefinition = {
         EXPECTED2 : 'Ingresar Id de ofertas creadas en Planit Evo:',
         EXPECTED3 : 'Carga Manual',
         EXPECTED4 : 'Niveles por grupo'
+    },
+    TC6 : {
+        NAME : 'Validate if Iam in FestivalesPage then I should be able to visit CargaPremios tab and validate headers',
+        INPUT1 : 'Perú',
+        INPUT2 : '202503',
+        INPUT3 : 'Envio #1',
+        INPUT4 : '#0 Scenario_26_3',
+        INPUT5 : '1',
+        EXPECTED1 : '#0 Scenario_26_3',
+        EXPECTED2 : 'Ingresar Id de ofertas creadas en Planit Evo:',
+        EXPECTED3 : 'ID Oferta',
+        EXPECTED4 : 'Descripción',
+        EXPECTED5 : 'Precio',
+        EXPECTED6 : 'Comentario',
+        EXPECTED7 : 'Medio de venta',
+        EXPECTED8 : 'Alcance',
+        EXPECTED9 : 'Flag activo'
+
     }
 }
