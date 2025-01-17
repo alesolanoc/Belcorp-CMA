@@ -98,7 +98,7 @@ describe('CMA Gana+Page Implementation', () =>{
         constants.GANAMAS.SCENARIO = testCasesGanaMasHighLevelDefinition.TC7.INPUT4
         constants.GANAMAS.ABRIR = testCasesGanaMasHighLevelDefinition.TC7.INPUT5
         constants.GANAMAS.NOMBREEVENTO = testCasesGanaMasHighLevelDefinition.TC7.INPUT6
-        constants.GANAMAS.DETALLEEVENTO = testCasesGanaMasHighLevelDefinition.TC7.INPUT7
+   //     constants.GANAMAS.DETALLEEVENTO = testCasesGanaMasHighLevelDefinition.TC7.INPUT7
         HomePage.pressGanaMasButton()
         GanaMasPage.pressPaisDropDownMenuButton()
         GanaMasPage.pressPaisFromDropDownMenuButton()

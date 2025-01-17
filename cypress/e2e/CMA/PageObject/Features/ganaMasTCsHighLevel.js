@@ -37,7 +37,7 @@ export const testCasesGanaMasHighLevelDefinition = {
         INPUT4 : '#1 Scenario_2_1',
         INPUT5 : '2',
         EXPECTED1 : '#1 Scenario_2_1',
-        EXPECTED2 : 'Última actualización del maestro de ofertas:&nbsp;',
+        EXPECTED2 : 'Ingresar Id de ofertas creadas en Planit Evo:',
         EXPECTED3 : 'Eventos'
     },
     TC7 : {
@@ -49,7 +49,7 @@ export const testCasesGanaMasHighLevelDefinition = {
         INPUT5 : '2',
         INPUT6 : 'EVENTO E05',
         EXPECTED1 : '#1 Scenario_2_1',
-        EXPECTED2 : 'Última actualización del maestro de ofertas:&nbsp;',
+        EXPECTED2 : 'Ingresar Id de ofertas creadas en Planit Evo:',
         EXPECTED3 : 'Eventos',
         EXPECTED4 : 'Detalles del Evento',
         EXPECTED5 : 'E01_S3',

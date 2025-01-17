@@ -75,7 +75,7 @@ describe('CMA FestivalesPage Implementation', () =>{
         FestivalesPage.pressAsignarPremiosTab()
     })
 
-    it.only(testCasesFestivalesHighLevelDefinition.TC6.NAME, () => {
+    it(testCasesFestivalesHighLevelDefinition.TC6.NAME, () => {
         constants.PAIS = testCasesFestivalesHighLevelDefinition.TC6.INPUT1
         constants.CAMPANIA = testCasesFestivalesHighLevelDefinition.TC6.INPUT2
         constants.FESTIVALES.EVENTO = testCasesFestivalesHighLevelDefinition.TC6.INPUT3

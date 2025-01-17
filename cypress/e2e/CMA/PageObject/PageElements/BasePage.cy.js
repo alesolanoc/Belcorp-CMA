@@ -7,7 +7,7 @@ class BasePage
     }
 
     goToURL() {
-        cy.visit('http://localhost:5174/',{failOnStatusCode: false}) 
+        cy.visit('http://localhost:5173/',{failOnStatusCode: false}) 
         Cypress.on('uncaught:exception', (err, runnable) => {
             return !err.message.includes(`Cannot read property '__error' of null`);
           })
