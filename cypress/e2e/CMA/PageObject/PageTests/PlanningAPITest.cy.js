@@ -1,7 +1,7 @@
 import { testCasesPlanningAPIsHighLevelDefinition } from "../Features/planningAPITCsHighLevel"
 
 
-describe('Planning API Testing', () =>{
+describe('Planning API Generic Testing', () =>{
 
     it(testCasesPlanningAPIsHighLevelDefinition.TC1.NAME, () => {
         cy.request({

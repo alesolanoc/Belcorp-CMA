@@ -86,5 +86,5 @@ export const testCasesStrategyAPIsHighLevelDefinition = {
         INPUT7 : "source",
         INPUT8 : "callback",
         EXPECTED1 : 200
-    },    
+    }    
 }
