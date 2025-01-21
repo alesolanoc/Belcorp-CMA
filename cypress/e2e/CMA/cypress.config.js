@@ -7,4 +7,5 @@ module.exports = defineConfig({
     },
     responseTimeout: 90000,
   },
+  "experimentalInteractiveRunEvents": true
 });
